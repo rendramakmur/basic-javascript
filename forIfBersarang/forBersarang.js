@@ -52,7 +52,6 @@ for(var i = 1; i <= 5; i++) {
         s += ' ';
     }
     for(var k = 1; k <= i; k++) {
-        // Kuncinya di space setelah bintang
         s += '* ';
     }
     s += '\n';
