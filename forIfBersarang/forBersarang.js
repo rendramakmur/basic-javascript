@@ -46,20 +46,20 @@ var s = '';
 //     s += '\n';
 // }
 
-// Buat pyramid *
-for(var i = 1; i <= 5; i++) {
-    for(var j = 1; j <= (5 - i); j++) {
-        s += ' ';
-    }
-    for(var k = 1; k <= i; k++) {
-        s += '* ';
-    }
-    s += '\n';
-}
+// // Buat pyramid *
+// for(var i = 1; i <= 5; i++) {
+//     for(var j = 1; j <= (5 - i); j++) {
+//         s += ' ';
+//     }
+//     for(var k = 1; k <= i; k++) {
+//         s += '* ';
+//     }
+//     s += '\n';
+// }
 
 
 
-// // # # # selang seling, masih error *infinite loop
+// // # # # selang seling, masih error *infinite loop -- Percobaan pertama
 // for(var i = 0; i < 6; i++) {
 // if(i % 2 == 0) {
 //     for(var j = 0; j < 6; j++) {
@@ -80,6 +80,31 @@ for(var i = 1; i <= 5; i++) {
 //     }
 //     s += '\n';
 // }
+
+
+// Bikin ketupat selang seling. # # # # *Berhasil! -- Ini percobaan ke dua
+for(i = 1; i <= 6; i++) {
+    if(i % 2 == 0) {
+        for(j = 1; j <= 6; j++) {
+            if(j % 2 == 0) {
+                s += ' ';
+            } else {
+                s += '#';
+            }
+        }
+    } else {
+        for(k = 1; k <= 6; k++) {
+            if(k % 2 == 0) {
+                s += '#';
+            } else {
+                s += ' ';
+            }
+        }
+    }
+
+    s += '\n';
+
+}
 
 
 console.log(s);
