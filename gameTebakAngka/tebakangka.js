@@ -19,7 +19,7 @@ for(i = 2; i >= 0; i--) {
 
     if(player == null || player == '') {
         break;
-    } else if(player == comp) {
+    } else if (player == comp) {
         alert('Selamat tebakan anda benar, angka-nya adalah: ' + comp);
         break;
     } else if (player < comp) {
