@@ -110,27 +110,77 @@ var s = '';
 //Buat ketupat
 //Buat pyramid ke atas dulu
 
-for(i = 1; i <= 5; i++) {
-    for(j = 1; j <= (5 - i); j++) {
+// for(i = 1; i <= 5; i++) {
+//     for(j = 1; j <= (5 - i); j++) {
+//         s += ' ';
+//     }
+//     for(k = 1; k <= i; k++) {
+//         s += '* ';
+//     }
+    
+//     s += '\n';
+// }
+
+// //Buat pyramid ke bawah kemudian
+// for(i = 1; i <= 5; i++) {
+//     for(j = 1; j <= i; j++) {
+//         s += ' ';
+//     }
+//     for(k = 1; k <= (5 - i); k++) {
+//         s += '* ';
+//     }
+
+//     s += '\n';
+// }
+
+// Latihan 28/12/2020 - Buat ketupat
+
+// for(i = 0; i <= 5; i++) {
+//     if (i % 2 !== 0) {
+//         for(j = 0; j <= 5; j++) {
+//             if(j % 2 == 0) {
+//                 s += ' ';
+//             } else {
+//                 s += '#';
+//             }
+//         }
+//     } else {
+//         for(j = 0; j <= 5; j++) {
+//             if(j % 2 !==0) {
+//                 s += ' ';
+//             } else {
+//                 s += '#';
+//             }
+//         }
+//     }
+    
+//     s += '\n';
+
+// }
+
+// Latihan 28/12/2020 - Buat pyramid
+
+for(i = 0; i <= 4; i++) {
+    for(j = 0; j <= (4-i); j++) {
         s += ' ';
     }
-    for(k = 1; k <= i; k++) {
+    for(j = 0; j <= i; j++) {
         s += '* ';
     }
-    
+
     s += '\n';
 }
 
-//Buat pyramid ke bawah kemudian
-for(i = 1; i <= 5; i++) {
-    for(j = 1; j <= i; j++) {
+for(i = 0; i <= 3; i++) {
+    for(j = 0; j <= i; j++) {
         s += ' ';
     }
-    for(k = 1; k <= (5 - i); k++) {
-        s += '* ';
+    for(j = 0; j <= (3-i); j++) {
+        s += ' *';
     }
 
     s += '\n';
+
 }
 
 console.log(s);
