@@ -10,27 +10,33 @@ alert('GAME TEBAK ANGKA \n\nTebak angka dari 1-10. Anda memiliki 3x kesempatan.'
 var comp = Math.floor(Math.random() * 10) + 1;
 console.log(comp);
 
+var ulang = true;
 
-//Rules, kalau benar, kalau > dari angka comp, dan < dari angka comp
-for(i = 2; i >= 0; i--) {
+while(ulang) {
+    //Rules, kalau benar, kalau > dari angka comp, dan < dari angka comp
+    for(i = 2; i >= 0; i--) {
 
-    //get numbernya dimasukin ke dalem looping
-    var player = prompt('Masukkan angka yang anda tebak:');
+        //get numbernya dimasukin ke dalem looping
+        var player = prompt('Masukkan angka yang anda tebak:');
 
-    if(player == null || player == '') {
-        break;
-    } else if (player == comp) {
-        alert('Selamat tebakan anda benar, angka-nya adalah: ' + comp);
-        break;
-    } else if (player < comp) {
-        alert('Kekecilan, naikkan nilai angkanya.\nKesempatan anda tinggal ' + i + 'x');
-    } else if (player > comp) {
-        alert('Kebesaran, turunkan nilai angkanya.\nKesempatan anda tinggal ' + i + 'x')
+        if(player == null || player == '') {
+            break;
+        } else if (player == comp) {
+            alert('Selamat tebakan anda benar, angka-nya adalah: ' + comp);
+            break;
+        } else if (player < comp) {
+            alert('Kekecilan, naikkan nilai angkanya.\nKesempatan anda tinggal ' + i + 'x');
+        } else if (player > comp) {
+            alert('Kebesaran, turunkan nilai angkanya.\nKesempatan anda tinggal ' + i + 'x')
+        }
+
+        if(i == 0) {
+            alert('Kesempatan anda telah habis.\nAngka yang benar adalah: ' + comp);
+        }
     }
 
-    if(i == 0) {
-        alert('Kesempatan anda telah habis.\nAngka yang benar adalah: ' + comp);
-    }
+ulang = confirm('Apakah anda ingin bermain lagi?');
+
 }
 //Diloop selama 3x
 
